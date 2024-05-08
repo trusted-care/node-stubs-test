@@ -1,0 +1,62 @@
+{
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "/*": [
+        "./*"
+      ],
+      "meteor/mongo": [
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/local_collection_driver.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/collection.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/connection_options.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/doc_fetcher.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/mongo_driver.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/mongo_utils.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/observe_multiplex.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/oplog_observe_driver.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/oplog_tailing.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/oplog_v2_converter.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/polling_observe_driver.js",
+        "/Users/sesp/.meteor/packages/mongo/1.16.9/web.browser/remote_collection_driver.js"
+      ],
+      "meteor/reactive-var": [
+        "/Users/sesp/.meteor/packages/reactive-var/1.0.12/web.browser/reactive-var.js"
+      ],
+      "meteor/es5-shim": [
+        "/Users/sesp/.meteor/packages/es5-shim/4.8.0/web.browser/client.js",
+        "/Users/sesp/.meteor/packages/es5-shim/4.8.0/web.browser/console.js",
+        "/Users/sesp/.meteor/packages/es5-shim/4.8.0/web.browser/cordova.js",
+        "/Users/sesp/.meteor/packages/es5-shim/4.8.0/web.browser/export_globals.js",
+        "/Users/sesp/.meteor/packages/es5-shim/4.8.0/web.browser/import_globals.js"
+      ],
+      "meteor/ecmascript": [
+        "/Users/sesp/.meteor/packages/ecmascript/0.16.8/web.browser/ecmascript.js"
+      ],
+      "meteor/shell-server": [
+        "/Users/sesp/.meteor/packages/shell-server/0.5.0/web.browser/main.js",
+        "/Users/sesp/.meteor/packages/shell-server/0.5.0/web.browser/shell-server.js"
+      ],
+      "meteor/hot-module-replacement": [
+        "/Users/sesp/.meteor/packages/hot-module-replacement/0.5.3/web.browser/hot-api.js",
+        "/Users/sesp/.meteor/packages/hot-module-replacement/0.5.3/web.browser/client.js",
+        "/Users/sesp/.meteor/packages/hot-module-replacement/0.5.3/web.browser/server.js"
+      ],
+      "meteor/react-meteor-data": [
+        "/Users/sesp/.meteor/packages/react-meteor-data/2.7.2/web.browser/index.js",
+        "/Users/sesp/.meteor/packages/react-meteor-data/2.7.2/web.browser/suspense/index.js"
+      ]
+    }
+  },
+  "typeAcquisition": {
+    "include": [
+      "meteor"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    ".meteor"
+  ]
+}
