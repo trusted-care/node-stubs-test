@@ -3,18 +3,29 @@ import { StorageCollection } from './storage'
 // Meteor method, which stores a number into the database
 Meteor.methods({
     storeNumber: async function (number) {
-        console.log(`Storing number ${number}`)
-
         const _id = await StorageCollection.insertAsync({
             number: number,
         })
 
-        console.log(`Number ${number} stored with _id ${_id}`)
+        if (Meteor.isServer) {
+            await new Promise((resolve) => setTimeout(resolve, 5000))
+        }
 
-        const storedNumber = await StorageCollection.findOneAsync({ _id })
+        const amountOfStorages = await StorageCollection.find().countAsync()
 
-        console.log(`Stored number: ${storedNumber.number}`)
+        return amountOfStorages
+    },
+    storeNumberSync: function (number) {
+        console.log(`Storing number ${number}`)
 
-        return storedNumber.number
+        // if (Meteor.isClient) {
+        //     return number + 50
+        // }
+
+        // if (Meteor.isServer) {
+        //     // await new Promise((resolve) => setTimeout(resolve, 5000))
+        // }
+
+        return number + 1
     },
 })

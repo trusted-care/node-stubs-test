@@ -1,5 +1,6 @@
 import { Meteor } from 'meteor/meteor'
 import { LinksCollection } from '/imports/api/links'
+import { StorageCollection } from '/imports/api/storage'
 import '/imports/api/methods'
 
 async function insertLink({ title, url }) {
@@ -34,5 +35,9 @@ Meteor.startup(async () => {
     // In order to be fetched in real-time to the clients
     Meteor.publish('links', function () {
         return LinksCollection.find()
+    })
+
+    Meteor.publish('storage', function () {
+        return StorageCollection.find()
     })
 })
